@@ -1,10 +1,10 @@
 # Cache Policy Simulator
 
-This project implements a simulator for evaluating cache performance under different replacement strategies. It models a direct-mapped cache and supports three widely used policies: FIFO (First-In-First-Out), LRU (Least Recently Used), and Random. The simulator helps analyze cache hit/miss rates using synthetic or user-defined memory access patterns.
+This project implements a simulator for evaluating cache performance under different replacement strategies. It models a set-associative  cache and supports three widely used policies: FIFO (First-In-First-Out), LRU (Least Recently Used), and Random. The simulator helps analyze cache hit/miss rates using synthetic or user-defined memory access patterns.
 
 ## Features
 
-- Direct-mapped cache simulation
+- Set-associative cache simulation
 - FIFO, LRU, and Random replacement strategies
 - Support for custom memory access patterns
 - Reports:
