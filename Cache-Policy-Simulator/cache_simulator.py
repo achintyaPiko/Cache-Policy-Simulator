@@ -24,19 +24,24 @@ class CacheSimulator:
 
     def _get_set_index(self, address):
         return address % self.num_sets
+    
 
     def lookup(self, address):
         
         set_index = self._get_set_index(address)
         cache_set = self.sets[set_index]
 
-        if address in cache_set:
+        if (address in cache_set and self.rule != 'LRU'):
             # cache hit
+            return True, set_index
+        elif (address in cache_set and self.rule == 'LRU'):
+            # LRU is actually being implemented here with the most recent data that is a hit being moved to the top by remove and append to denote a MRU data
+            cache_set.remove(address)
+            cache_set.append(address)
             return True, set_index
         else:
             
-            # cache miss
-                                    
+            # cache miss                                    
             if len(cache_set) >= self.associativity:
                 # cache is full and something needs to be evicted. What rules are going to be used are going to differ
                 evicted =  self.evict(self.rule,set_index)
@@ -75,8 +80,10 @@ class CacheSimulator:
         return evicted
 
     def lruReplacement(self, set_index):
-        pass
-        #return evicted
+        victim_set = self.sets[set_index]
+        evicted = victim_set.pop(0)
+        #behavior of fifoReplacement and lruReplacement is same but actual LRU is implemented in the hit miss detection block
+        return evicted
 
     def evict(self,policy,set_index):
         if(policy == "RR"):
