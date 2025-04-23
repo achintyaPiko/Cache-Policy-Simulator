@@ -35,3 +35,7 @@ The simulator processes the memory trace and reports cache performance statistic
 
 ```bash
 python run_simulation.py --policy LRU --cache-size 8 --trace traces/sample_trace.txt
+```
+## References Used:
+[Set-Associative Mapping](https://www.youtube.com/watch?v=mCF5XNn_xfA)
+
