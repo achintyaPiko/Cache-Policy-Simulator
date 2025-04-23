@@ -3,3 +3,5 @@ def load_trace(file_path):
     with open(file_path, 'r') as f:
         trace = [int(line.strip()) for line in f.readlines()]
     return trace
+
+
