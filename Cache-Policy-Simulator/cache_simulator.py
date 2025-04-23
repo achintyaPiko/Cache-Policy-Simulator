@@ -53,11 +53,16 @@ class CacheSimulator:
         hit, set_index = self.lookup(address)
         if hit:
             self.hits += 1
+            """
+            Uncomment below code If you want simultaneous Hit Text
             print(f"HIT: Address {address} found in set {set_index}")
+            """
         else:
             self.misses += 1
+            """
+            Uncomment below code If you want simultaneous Miss Text
             print(f"MISS: Address {address} inserted into set {set_index}")
-
+            """
     def randomReplacement(self, set_index):
         victim_set = self.sets[set_index]
         idx = random.randint(0, len(victim_set) - 1)
