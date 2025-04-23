@@ -38,4 +38,4 @@ python run_simulation.py --policy LRU --cache-size 8 --trace traces/sample_trace
 ```
 ## References Used:
 [Set-Associative Mapping](https://www.youtube.com/watch?v=mCF5XNn_xfA)
-
+[NPTEL lectures](https://youtu.be/OwYyLhZWcgs)
