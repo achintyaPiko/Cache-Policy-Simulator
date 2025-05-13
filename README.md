@@ -36,6 +36,10 @@ The simulator processes the memory trace and reports cache performance statistic
 ```bash
 python .\run_simulation.py --policy FIFO --cache-size 4 --associativity 2 --trace Tracefile.txt
 ```
+### Output
+
+![Output Example](ExpectedOutputFromUnknownTracefile.png)
+
 ## References Used:
 [Set-Associative Mapping](https://www.youtube.com/watch?v=mCF5XNn_xfA)
 [NPTEL lectures](https://youtu.be/OwYyLhZWcgs)
